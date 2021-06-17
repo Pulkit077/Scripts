@@ -37,7 +37,7 @@ export CCACHE_EXEC=$(which ccache)
 export CCACHE_DIR=/home/ccache/$username
 ccache -C
 export USE_CCACHE=1
-ccache -M 50G
+ccache -M 150G
 wait
 echo -e ${grn}"CCACHE Cleared"${txtrst};
 fi
