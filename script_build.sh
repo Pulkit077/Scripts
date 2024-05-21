@@ -27,14 +27,14 @@ then
 echo -e ${blu}"CCACHE is enabled for this build"${txtrst}
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
-export CCACHE_DIR=/home/pulkit/.ccache
+export CCACHE_DIR=/home/ccache/$username
 ccache -M 150G
 fi
 
 if [ "$use_ccache" = "clean" ];
 then
 export CCACHE_EXEC=$(which ccache)
-export CCACHE_DIR=/home/pulkit/.ccache
+export CCACHE_DIR=/home/ccache/$username
 ccache -C
 export USE_CCACHE=1
 ccache -M 150G
